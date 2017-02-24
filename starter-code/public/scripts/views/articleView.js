@@ -34,10 +34,10 @@
     });
   };
 
-  // TODO: Combine both filter functions to a single event handler,
+  // DONE: Combine both filter functions to a single event handler,
   // which simply redirects to a url like: /category/skateboarding or /author/Kevin+Bacon
   // Where is it invoked? What values are passed in? Where does it interact elsewhere in the code?
-  // Put your response in this comment...
+  // it is being called on the articleView.index, which is being called on page load. 'change' of filters is being passed in to handleFilters. it is handling the author and category filters.
   articleView.handleFilters = function() {
     $('#filters').one('change', 'select', function() {
       let resource = this.id.replace('-filter', '');
@@ -67,8 +67,8 @@
     articleView.populateFilters();
     articleView.handleFilters();
 
-    // TODO: Replace setTeasers with just the truncation logic, if needed. Where is it invoked? What values are passed in? Where does it interact elsewhere in the code?
-    // Put your response in this comment...
+    // DONE: Replace setTeasers with just the truncation logic, if needed. Where is it invoked? What values are passed in? Where does it interact elsewhere in the code?
+    // if the article with id of #articles is greater than one, then it will be invoked. .length is the value passed in. it interacts on the index page.
     if ($('#articles article').length > 1) {
       $('.article-body *:nth-of-type(n+2)').hide();
     }

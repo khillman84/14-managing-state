@@ -10,8 +10,8 @@
     $about.show().siblings().hide();
   };
 
-  // TODO: What is in 'render'? What values are passed in? Where does it interact elsewhere in the code?
-  // Put your response in this comment...
+  // DONE: What is in 'render'? What values are passed in? Where does it interact elsewhere in the code?
+  // render is a variable that is assigned to compile the handlebar #repo-template. it is passed into the .map method on line 21.
   const render = Handlebars.compile($('#repo-template').text());
 
   repoView.index = function() {

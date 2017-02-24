@@ -10,8 +10,8 @@
     $('#new-form').on('change', newArticle.create);
   };
 
-// TODO: Where is this invoked? What values are passed in? Where does it interact elsewhere in the code?
-// Put your response in this comment...
+// DONE: Where is this invoked? What values are passed in? Where does it interact elsewhere in the code?
+//it's being called on the initNewArticlePage function as a callback. .empty, .append, .each, .show, and .value are being passed in. it interacts with the new.html page.
   newArticle.create = function() {
     $('#articles').empty();
     let formArticle = new Article({
